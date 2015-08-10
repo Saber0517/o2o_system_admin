@@ -21,7 +21,8 @@ public class UserServlet extends HttpServlet {
         String role = request.getParameter("role");
         UserEntityService userEntityService = new UserEntityServiceImpl();
         List<UserEntity> userEntityList = userEntityService.getUserByRole(role);
-
+        request.setAttribute("userEntityList", userEntityList);
+        request.getRequestDispatcher("main/seller.jsp").forward(request, response);
         System.out.printf(role);
     }
 

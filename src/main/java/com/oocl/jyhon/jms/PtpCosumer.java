@@ -28,6 +28,7 @@ public class PtpCosumer {
         try {
             p.load(inputStream);
             for (Object keyName : p.keySet()) {
+                System.out.println(p.get(keyName));
                 configMap.put((String) keyName, (String) p.get(keyName));
             }
         } catch (IOException e) {

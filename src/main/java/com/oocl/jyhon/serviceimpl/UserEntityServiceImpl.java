@@ -30,7 +30,7 @@ public class UserEntityServiceImpl implements UserEntityService {
     }
 
     public List<UserEntity> getUserByRole(String role) {
-       return  null;
+       return  userEntityDaoImple.getUserByRole(role);
     }
 
     public int changeUserEntityStatus(UserEntity userEntity) {

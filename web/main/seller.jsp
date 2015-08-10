@@ -50,7 +50,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">${currentUser.userName} <span
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       role="button">${currentUser.userName} <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="../login.html"><i class="glyphicon glyphicon-log-out"></i>&emsp;Logout</a></li>
@@ -79,56 +80,30 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>{sellerId}</td>
-                    <td>{sellerName}</td>
-                    <td>{sellerIdCard}</td>
-                    <td>{sellerTel}</td>
-                    <td>{sellerStatus}</td>
-                    <td><a href="auditUserApply.jsp">update</a>&emsp;<a href="#"
-                                                                       onclick="return confirm('Delete this item?')">delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>{sellerId}</td>
-                    <td>{sellerName}</td>
-                    <td>{sellerIdCard}</td>
-                    <td>{sellerTel}</td>
-                    <td>{sellerStatus}</td>
-                    <td><a href="auditUserApply.jsp">update</a>&emsp;<a href="#"
-                                                                       onclick="return confirm('Delete this item?')">delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>{sellerId}</td>
-                    <td>{sellerName}</td>
-                    <td>{sellerIdCard}</td>
-                    <td>{sellerTel}</td>
-                    <td>{sellerStatus}</td>
-                    <td><a href="auditUserApply.jsp">update</a>&emsp;<a href="#"
-                                                                       onclick="return confirm('Delete this item?')">delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>{sellerId}</td>
-                    <td>{sellerName}</td>
-                    <td>{sellerIdCard}</td>
-                    <td>{sellerTel}</td>
-                    <td>{sellerStatus}</td>
-                    <td><a href="auditUserApply.jsp">update</a>&emsp;<a href="#"
-                                                                       onclick="return confirm('Delete this item?')">delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>{sellerId}</td>
-                    <td>{sellerName}</td>
-                    <td>{sellerIdCard}</td>
-                    <td>{sellerTel}</td>
-                    <td>{sellerStatus}</td>
-                    <td><a href="auditUserApply.jsp">update</a>&emsp;<a href="#"
-                                                                       onclick="return confirm('Delete this item?')">delete</a>
-                    </td>
-                </tr>
+                <c:forEach items="${userEntityList}" var="userEntityItem">
+                    <tr>
+                        <td>${userEntityItem.userID}</td>
+                        <td>${userEntityItem.userName}</td>
+                        <td>${userEntityItem.tel}</td>
+                        <td>${userEntityItem.license}</td>
+                        <td>
+                            <c:forEach items="${statusEntityList}" var="statusItem">
+                                <c:choose>
+                                    <c:when test="${statusItem.statusID eq userEntityItem.statusId}">
+                                        ${statusItem.statusName}
+                                    </c:when>
+                                    <c:otherwise>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
+                        </td>
+                        <td>
+                            <a href="../UpdataUserServlet?userID=${userEntityItem.userID}">update</a>&emsp;
+                            <a href="../DeleteUserSerlvet?userID=${userEntityItem.userID}"
+                               onclick="return confirm('Delete this item?')">delete</a>
+                        </td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
             <nav class="text-right">

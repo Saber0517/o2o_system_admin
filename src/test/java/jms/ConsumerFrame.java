@@ -37,7 +37,7 @@ public class ConsumerFrame extends JFrame {
 
     private void init() {
 
-        brokerUrlTf = new JTextField("failover://tcp://localhost:61616");
+       brokerUrlTf = new JTextField("failover://tcp://localhost:61616");
         destinationUrlTf = new JTextField("john_seq");
         msgContentTa = new JTextArea(5, 60);
         openButton = new JButton("打开");
