@@ -1,10 +1,13 @@
 package com.oocl.jyhon.serviceimpl;
 
 
-import com.oocl.jyhon.dao.EntityDao;
+
+
 import com.oocl.jyhon.daoimple.UserEntityDaoImple;
 import com.oocl.jyhon.entiy.UserEntity;
 import com.oocl.jyhon.service.UserEntityService;
+
+import java.util.List;
 
 /**
  * Created by ZHANGJA4 on 8/8/2015.
@@ -24,6 +27,10 @@ public class UserEntityServiceImpl implements UserEntityService {
 
     public int changeEntityStatus(UserEntity userEntity) {
         return userEntityDaoImple.updateEntityStatus(userEntity);
+    }
+
+    public List<UserEntity> getUserByRole(String role) {
+       return  null;
     }
 
     public int changeUserEntityStatus(UserEntity userEntity) {

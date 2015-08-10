@@ -31,8 +31,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">User <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="seller.jsp"><i class="glyphicon glyphicon-usd"></i>Seller</a></li>
-                        <li><a href="customer.jsp"><i class="glyphicon glyphicon-user"></i>Customer</a></li>
+                        <li><a href="../UserServlet?role=seller"><i class="glyphicon glyphicon-usd"></i>Seller</a></li>
+                        <li><a href="../UserServlet?role=customer"><i class="glyphicon glyphicon-user"></i>Customer</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
