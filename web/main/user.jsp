@@ -76,6 +76,7 @@
                     <th>Name</th>
                     <th>ID Card</th>
                     <th>Tel</th>
+                    <td>Picture</td>
                     <th>Status</th>
                     <th style="width:150px">Action</th>
                 </tr>
@@ -85,8 +86,9 @@
                     <tr>
                         <td>${userEntityItem.userID}</td>
                         <td>${userEntityItem.userName}</td>
+                        <td>${userEntityItem.idCard}</td>
                         <td>${userEntityItem.tel}</td>
-                        <td>${userEntityItem.license}</td>
+                        <td><div class=""><img src="../File?filename=${userEntityItem.license}" style="width:60%" class="img-rounded img-responsive"></div></td>
                         <td>
                             <c:forEach items="${statusEntityList}" var="statusItem">
                                 <c:choose>
