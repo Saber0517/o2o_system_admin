@@ -27,15 +27,24 @@
         </div>
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
-                <li class="dropdown active">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">User <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../UserServlet?role=seller"><i class="glyphicon glyphicon-usd"></i>Seller</a></li>
+                        <li><a href="../UserServlet?role=customer"><i class="glyphicon glyphicon-user"></i>Customer</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Food <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="mainCourse.jsp"><i class="glyphicon glyphicon-cutlery"></i>Main course</a></li>
-                        <li><a href="sideDishes.jsp"><i class="glyphicon glyphicon-leaf"></i>Side dishes</a></li>
-                        <li><a href="drink.jsp"><i class="glyphicon glyphicon-glass"></i>Drink</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="newFood.jsp"><i class="glyphicon glyphicon-plus"></i>New</a></li>
+                        <c:forEach items="${foodTypeEntityList}" var="foodTypeItem">
+                            <li><a href="../FoodSerlvet?typeID=${foodTypeItem.foodTypeID}"><i
+                                    class="glyphicon glyphicon-cutlery"></i>${foodTypeItem.foodTypeName}
+                            </a></li>
+                        </c:forEach>
                     </ul>
                 </li>
                 <li><a href="../AuditServlet">AuditRequest</a></li>

@@ -27,12 +27,13 @@
         </div>
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">User <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="seller.html"><i class="glyphicon glyphicon-usd"></i>Seller</a></li>
-                        <li><a href="customer.html"><i class="glyphicon glyphicon-user"></i>Customer</a></li>
+                        <li><a href="../UserServlet?role=seller"><i class="glyphicon glyphicon-usd"></i>Seller</a></li>
+                        <li><a href="../UserServlet?role=customer"><i class="glyphicon glyphicon-user"></i>Customer</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -41,7 +42,8 @@
                     <ul class="dropdown-menu">
                         <c:forEach items="${foodTypeEntityList}" var="foodTypeItem">
                             <li><a href="../FoodSerlvet?typeID=${foodTypeItem.foodTypeID}"><i
-                                    class="glyphicon glyphicon-cutlery"></i>${foodTypeItem.foodTypeName}</a></li>
+                                    class="glyphicon glyphicon-cutlery"></i>${foodTypeItem.foodTypeName}
+                            </a></li>
                         </c:forEach>
                     </ul>
                 </li>

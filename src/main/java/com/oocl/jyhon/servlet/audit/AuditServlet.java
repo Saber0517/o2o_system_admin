@@ -24,8 +24,6 @@ import java.util.Map;
 public class AuditServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        setStatusTypeToSession(request);
-
         AuditService auditService = new AuditSerivceImpl();
         Map<String, Object> requestMap = auditService.getRequest(this.getServletContext());
         if (requestMap.isEmpty()) {
@@ -38,15 +36,6 @@ public class AuditServlet extends HttpServlet {
             System.out.printf("License:"+userEntity.getLicense());
             request.setAttribute("currentAuditUserEntity", requestMap.get("requestUserEntity"));
             request.getRequestDispatcher("main/auditUserApply.jsp").forward(request, response);
-        }
-    }
-
-    private void setStatusTypeToSession(HttpServletRequest request) {
-        StatusEntityDao statusEntityDao = new StatusEntityDaoImple();
-        List<StatusEntity> statusEntityList = (List<StatusEntity>) request.getSession().getAttribute("foodTypeList");
-        if (null == statusEntityList) {
-            statusEntityList = statusEntityDao.findAll();
-            request.getSession().setAttribute("statusEntityList", statusEntityList);
         }
     }
 
