@@ -78,11 +78,13 @@
                 <div class="form-group">
                     <label>Name</label>
                     <input type="hidden" name="id" value="${currentAuditFoodEntity.foodID}">
-                    <input type="text" name="name" class="form-control" value="${currentAuditFoodEntity.foodName}" required readonly/>
+                    <input type="text" name="name" class="form-control" value="${currentAuditFoodEntity.foodName}"
+                           required readonly/>
                 </div>
                 <div class="form-group">
                     <label>Price</label>
-                    <input type="number" name="price" class="form-control" value="${currentAuditFoodEntity.price}" step="0.001" required
+                    <input type="number" name="price" class="form-control" value="${currentAuditFoodEntity.price}"
+                           step="0.001" required
                            readonly/>
                 </div>
                 <div class="form-group">
@@ -105,6 +107,8 @@
                     <input type="file" name="picture" class="form-control" required disabled="disabled"/>
                 </div>
                 <br/>
+                <%--<img src="../File?filename=${currentAuditFoodEntity.pictureURL}" style="width:100%">--%>
+
 
                 <div class="form-group">
                     <label>Status</label>

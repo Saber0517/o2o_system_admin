@@ -22,7 +22,7 @@ public class UserServlet extends HttpServlet {
         UserEntityService userEntityService = new UserEntityServiceImpl();
         List<UserEntity> userEntityList = userEntityService.getUserByRole(role);
         request.setAttribute("userEntityList", userEntityList);
-        request.getRequestDispatcher("main/seller.jsp").forward(request, response);
+        request.getRequestDispatcher("main/user.jsp").forward(request, response);
         System.out.printf(role);
     }
 
