@@ -33,7 +33,7 @@
                             <li><a href="sideDishes.jsp"><i class="glyphicon glyphicon-leaf"></i>Side dishes</a></li>
                             <li><a href="drink.jsp"><i class="glyphicon glyphicon-glass"></i>Drink</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../main/newFood.jsp"><i class="glyphicon glyphicon-plus"></i>New</a></li>
+                            <li><a href="../garbage/newFood.jsp"><i class="glyphicon glyphicon-plus"></i>New</a></li>
                         </ul>
                     </li>
                     <li class="active"><a href="package.jsp">Package</a></li>

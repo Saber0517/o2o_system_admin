@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="o2o_system_core" />
-        <module name="week4_weekly_o2o_system_admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

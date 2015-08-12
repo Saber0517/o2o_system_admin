@@ -43,7 +43,6 @@
                             <li><a href="../FoodSerlvet?typeID=${foodTypeItem.foodTypeID}"><i
                                     class="glyphicon glyphicon-cutlery"></i>${foodTypeItem.foodTypeName}
                             </a></li>
-                            <!--<li><a href="mainCourse.jsp"><i class="glyphicon glyphicon-cutlery"></i>Main course</a></li>-->
                         </c:forEach>
                     </ul>
                 </li>
@@ -101,6 +100,7 @@
                             </c:forEach>
                         </td>
                         <td>
+                            <a href="../UserServlet?userID=${userEntityItem.userID}">view</a>&emsp;
                             <a href="../UpdataUserServlet?userID=${userEntityItem.userID}">update</a>&emsp;
                             <a href="../DeleteUserSerlvet?userID=${userEntityItem.userID}"
                                onclick="return confirm('Delete this item?')">delete</a>

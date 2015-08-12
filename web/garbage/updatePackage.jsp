@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.jsp">ADMIN</a>
+                <a class="navbar-brand" href="../main/index.jsp">ADMIN</a>
             </div>
             <div class="collapse navbar-collapse" id="main-nav">
                 <ul class="nav navbar-nav">
@@ -53,12 +53,12 @@
         <div class="row">
             <div class="col-xs-12">
                 <ol class="breadcrumb">
-                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="../main/index.jsp">Home</a></li>
                     <li><a href="package.jsp">Package</a></li>
                     <li class="active">Update package</li>
                 </ol>
 
-                <form action="index.jsp" method="post">
+                <form action="../main/index.jsp" method="post">
                     <h1 class="page-header">Update Package</h1>
                     <div class="form-group">
                         <label>Name</label>

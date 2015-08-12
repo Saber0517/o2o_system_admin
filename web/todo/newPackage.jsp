@@ -38,7 +38,7 @@
                             </li>
                         </c:forEach>
                         <li role="separator" class="divider"></li>
-                        <li><a href="../main/newFood.jsp"><i class="glyphicon glyphicon-plus"></i>New</a></li>
+                        <li><a href="../garbage/newFood.jsp"><i class="glyphicon glyphicon-plus"></i>New</a></li>
                     </ul>
                 </li>
                 <li class="active"><a href="package.jsp">Package</a></li>
