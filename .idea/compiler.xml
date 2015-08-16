@@ -26,7 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="o2o_system_core" target="1.7" />
+      <module name="o2o_system_core" target="1.5" />
       <module name="week4_weekly_o2o_system_admin" target="1.7" />
     </bytecodeTargetLevel>
   </component>
