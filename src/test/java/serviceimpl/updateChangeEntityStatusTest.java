@@ -2,11 +2,10 @@ package serviceimpl;
 
 import com.oocl.jyhon.entiy.FoodEntity;
 import com.oocl.jyhon.entiy.UserEntity;
-import com.oocl.jyhon.service.FoodEntityService;
-import com.oocl.jyhon.service.FoodTypeEntityService;
-import com.oocl.jyhon.service.UserEntityService;
-import com.oocl.jyhon.serviceimpl.FoodEntityServiceImpl;
-import com.oocl.jyhon.serviceimpl.UserEntityServiceImpl;
+import com.jyhon.service.FoodEntityService;
+import com.jyhon.service.UserEntityService;
+import com.jyhon.serviceimpl.FoodEntityServiceImpl;
+import com.jyhon.serviceimpl.UserEntityServiceImpl;
 import junit.framework.TestCase;
 import org.junit.Test;
 

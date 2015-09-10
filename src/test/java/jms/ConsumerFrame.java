@@ -1,6 +1,6 @@
 package jms;
 
-import com.oocl.jyhon.jms.PtpCosumer;
+import com.jyhon.jms.PtpCosumer;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
 
